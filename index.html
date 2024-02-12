@@ -1,0 +1,89 @@
+<!-- version 23-11-02 by Felicia -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Guess the Color!</title>
+        <link rel="stylesheet" type="text/css" href="./styles/index.css">
+        <link rel="stylesheet" type="text/css" href="./styles/mobile.css">
+        <script src="./scripts/gameSetup.js"></script>
+        <script src="./scripts/gameBoard.js"></script>
+        <script src="./scripts/cheatCode.js"></script>
+        <script src="./scripts/colors.js"></script>
+        <script src="./scripts/highScore.js"></script>
+    </head>
+    <body>
+        <header id="gameTitle">
+            <h1>Feli and Nihel's Colours Game</h1>
+        </header>
+        <main>
+            <section id="gameSetup">
+                <header>
+                    <h2>Game setup</h2>
+                </header>
+                <form>
+                    <fieldset>
+                        <div id="userInputName">
+                            <label for="username">Player Name</label>
+                            <input type="text" id="username" pattern="[a-zA-Z0-9 ]{5,}"  placeholder="Enter your name" required > 
+                        </div>
+                        <div id="userInputSize">
+                            <label for="boardSize">Game Board Size</label>
+                            <input type="number" id="boardSize" min="3" max="7" placeholder="Enter table size" value="3" required > 
+                        </div>
+                        <div id="userInputColor">
+                            <label for="colour">Colour</label>
+                            <select name="colours" id="colour" required>
+                                <option value="" selected disabled hidden>Select a color!</option> 
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                            </select>
+                        </div>
+                        <div id="userInputDifficulty">
+                            <label for="difficulty">Difficulty</label>
+                            <input type="range" id="difficulty" min="0" max="3" value="0">
+                        </div>
+                    </fieldset>
+                    <section id="startGame">
+                        <button type="submit" id="startButton">Start Game!</button>
+                </section>
+                </form>
+            </section>
+           
+            <section id="gamePerformance">
+                <div id="leftSide">
+                    <div id ="tableHere">
+                    </div>
+                    <span id="statusText">&nbsp;</span>
+                    <button type="button" id="submitButton">Submit your guess!</button>
+                </div>
+                
+                <div id="highScores">
+                    <header id="highScoreTitle">
+                        <h2>High Scores</h2>
+                    </header>
+                    <div id="scoreInfo">
+                        <table id="scoreTable">
+                            <thead>
+                                <tr>
+                                    <th>Player Name</th>
+                                    <th id="ascButton">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            Copyright © Felicia Luu and Nihel Madani 2023
+        </footer>
+    </body>
+
+
+</html>
+   

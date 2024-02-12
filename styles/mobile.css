@@ -1,0 +1,37 @@
+/* version 23-11-02 by Felicia */
+@media screen and (max-width: 650px){
+    main{
+        display: flex; 
+        flex-direction: column;
+    }
+
+
+    #gameTitle{
+        padding: 10px;
+    }
+
+    #gameSetup, #tableHere, #highScores{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #gamePerformance{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #tableHere > table{
+        height: 60vh;
+    }
+
+    #submitButton{
+        margin: 10px;
+    }
+
+}
